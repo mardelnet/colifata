@@ -1,10 +1,13 @@
-<?php /* Template Name: Prensa */ ?>
 <?php get_header(); ?>
-<section class="py-6 is-relative content">
-    <h1 class='is-size-1 has-secondary-font is-absolute'>
-        <?php echo get_the_title(); ?>
-    </h1>
+<section class="py-6 content">
 	<div class="container">
+        <div class="columns">
+            <div class="column is-full is-bold">
+                <h1 class='is-size-1 has-text-dark has-secondary-font'>
+                    <?php echo get_the_title(); ?>
+                </h1>
+            </div>
+        </div>
         <?php if( have_rows('nota_de_prensa') ): while( have_rows('nota_de_prensa') ) : the_row(); ?>
             <div class="columns">
                 <div class="column is-half is-bold">
@@ -19,5 +22,5 @@
         <?php endwhile; endif; ?>			
 	</div>
 </section>
-<?php get_template_parts('parts/donar'); ?>
+<?php get_template_part('parts/donar'); ?>
 <?php get_footer(); ?>
