@@ -16,7 +16,9 @@
                     <a class="navbar-link has-text-black is-bold">Institucional</a>
                     <div class="navbar-dropdown">
                         <a class="navbar-item">Nosotros</a>
-                        <a class="navbar-item">Programas de Acción</a>
+                        <a target='_self' class="navbar-item" href='/programas-de-accion' >
+                            Programas de Acción
+                        </a>
                         <a target='_self' class="navbar-item" href='/historia-reconocimientos' >
                             Historia / Reconocimientos
                         </a>

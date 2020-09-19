@@ -2,8 +2,65 @@
 if( function_exists('acf_add_local_field_group') ):
 
     acf_add_local_field_group(array(
+        'key' => 'group_5f621ac17406f',
+        'title' => 'Historia',
+        'fields' => array(
+            array(
+                'key' => 'field_5f621ad7ac027',
+                'label' => 'Historia',
+                'name' => 'historia',
+                'type' => 'wysiwyg',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'tabs' => 'all',
+                'toolbar' => 'basic',
+                'media_upload' => 1,
+                'delay' => 0,
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'page',
+                    'operator' => '==',
+                    'value' => '9515',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'acf_after_title',
+        'style' => 'seamless',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => array(
+            0 => 'the_content',
+            1 => 'excerpt',
+            2 => 'discussion',
+            3 => 'comments',
+            4 => 'revisions',
+            5 => 'slug',
+            6 => 'author',
+            7 => 'format',
+            8 => 'page_attributes',
+            9 => 'featured_image',
+            10 => 'categories',
+            11 => 'tags',
+            12 => 'send-trackbacks',
+        ),
+        'active' => true,
+        'description' => '',
+    ));
+    
+    acf_add_local_field_group(array(
         'key' => 'group_5f5fbd00d2baf',
-        'title' => '[:es]Prensa[:]',
+        'title' => 'Prensa',
         'fields' => array(
             array(
                 'key' => 'field_5f5fbd6df2b5b',
@@ -131,8 +188,129 @@ if( function_exists('acf_add_local_field_group') ):
     ));
     
     acf_add_local_field_group(array(
+        'key' => 'group_5f621f899455f',
+        'title' => 'Programas de Acción',
+        'fields' => array(
+            array(
+                'key' => 'field_5f621f9fe2606',
+                'label' => 'Programa',
+                'name' => 'programa',
+                'type' => 'repeater',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'collapsed' => '',
+                'min' => 0,
+                'max' => 0,
+                'layout' => 'row',
+                'button_label' => 'Agregar Programa',
+                'sub_fields' => array(
+                    array(
+                        'key' => 'field_5f621fbe67bed',
+                        'label' => 'Nombre del programa',
+                        'name' => 'nombre_del_programa',
+                        'type' => 'text',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'prepend' => '',
+                        'append' => '',
+                        'maxlength' => '',
+                    ),
+                    array(
+                        'key' => 'field_5f621fe567bee',
+                        'label' => 'Descripción del programa',
+                        'name' => 'descripcion_del_programa',
+                        'type' => 'wysiwyg',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'default_value' => '',
+                        'tabs' => 'all',
+                        'toolbar' => 'basic',
+                        'media_upload' => 0,
+                        'delay' => 0,
+                    ),
+                    array(
+                        'key' => 'field_5f62200167bef',
+                        'label' => 'Imagen',
+                        'name' => 'imagen',
+                        'type' => 'image',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'return_format' => 'array',
+                        'preview_size' => 'thumbnail',
+                        'library' => 'all',
+                        'min_width' => '',
+                        'min_height' => '',
+                        'min_size' => '',
+                        'max_width' => '',
+                        'max_height' => '',
+                        'max_size' => 1,
+                        'mime_types' => '',
+                    ),
+                ),
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'page',
+                    'operator' => '==',
+                    'value' => '9511',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'acf_after_title',
+        'style' => 'seamless',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => array(
+            0 => 'the_content',
+            1 => 'excerpt',
+            2 => 'discussion',
+            3 => 'comments',
+            4 => 'revisions',
+            5 => 'slug',
+            6 => 'author',
+            7 => 'format',
+            8 => 'page_attributes',
+            9 => 'featured_image',
+            10 => 'categories',
+            11 => 'tags',
+            12 => 'send-trackbacks',
+        ),
+        'active' => true,
+        'description' => '',
+    ));
+    
+    acf_add_local_field_group(array(
         'key' => 'group_5f5fbe9b0fbf8',
-        'title' => '[:es]Reconocimientos[:]',
+        'title' => 'Reconocimientos',
         'fields' => array(
             array(
                 'key' => 'field_5f5fbf30177fe',
