@@ -214,6 +214,13 @@ footer li {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+.tab-border {
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 .tabs.is-toggle li.is-active a {
     background-color: var(--color1);
     border-color: var(--color1);

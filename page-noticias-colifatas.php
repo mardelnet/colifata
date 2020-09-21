@@ -14,28 +14,30 @@
         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
         <?php if ( $i%3 == 0 ) : ?><div class="columns"><?php endif; ?>
             <div class="column is-one-third">
-                <div class="card has-border-radius">
-                    <?php if (has_post_thumbnail( $post->ID ) ): ?>
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-                                <img class="has-object-fit-cover has-border-radius" src="<?php echo $image[0]; ?>" alt="Noticia de La Colifata">
-                            </figure>
-                        </div>
-                    <?php endif; ?>
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                                <p class="title is-4">
-                                    <?php echo get_the_title(); ?>
-                                </p>
+                <a target='_self' href='<?php echo get_permalink(); ?>'>
+                    <div class="card has-border-radius">
+                        <?php if (has_post_thumbnail( $post->ID ) ): ?>
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+                                    <img class="has-object-fit-cover has-border-radius" src="<?php echo $image[0]; ?>" alt="Noticia de La Colifata">
+                                </figure>
+                            </div>
+                        <?php endif; ?>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">
+                                        <?php echo get_the_title(); ?>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <?php echo substr( strip_tags( get_the_content() ) , 0 , 200 ); ?>...
                             </div>
                         </div>
-                        <div class="content">
-                            <?php echo substr( strip_tags( get_the_content() ) , 0 , 200 ); ?>...
-                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         <?php if ( $j != 0 && $j%3 == 0 ) : ?></div><?php endif; ?>
         <?php $i++; $j++; endwhile; ?>

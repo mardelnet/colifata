@@ -25,7 +25,7 @@
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="">
+                        <a target="_blank" href="https://www.instagram.com/radiolacolifata/">
                         <span class="icon has-text-white is-size-4"><i class="fab fa-instagram"></i></span>
                         </a>
                     </li>
@@ -51,32 +51,7 @@
                     Consultas Online
                 </p>
                 <p>
-                    <div class="field">
-                        <div class="control has-icons-left">
-                            <input class="input" type="text" placeholder="Nombre Completo">
-                            <span class="icon is-small is-left">
-                            <i class="fas fa-user"></i>
-                            </span>
-                        </div>
-                        </div>
-                        <div class="field">
-                        <div class="control has-icons-left">
-                            <input class="input" type="email" placeholder="Email">
-                            <span class="icon is-small is-left">
-                            <i class="fas fa-envelope"></i>
-                            </span>
-                        </div>
-                        </div>
-                        <div class="field">
-                        <div class="control">
-                            <textarea class="textarea" placeholder="Mensaje..."></textarea>
-                        </div>
-                        </div>
-                        <div class="field is-grouped">
-                        <div class="control">
-                            <button class="button is-link has-text-black">Enviar</button>
-                        </div>
-                    </div>
+                    <?php echo do_shortcode( '[contact-form-7 id="10867" title="Footer contact form"]' ) ?>
                 </p>
             </div>
         </div>
@@ -98,7 +73,6 @@
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/assets/js/slick.min.js"></script>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/assets/js/fontawesome.js"></script>
-<?php get_template_part('parts/scripts'); ?>		
 <?php wp_footer(); ?>														
 </body>
 </html>

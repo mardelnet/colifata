@@ -132,4 +132,5 @@
 		</div>
 	</div>
 </section>
+<?php wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/home-slider.js', 1.1, true); ?>
 <?php get_footer(); ?>

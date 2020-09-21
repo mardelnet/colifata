@@ -1,4 +1,3 @@
-<script>
 $(document).ready(function(){
     $('#noticias .slider').slick({
         infinite: true,
@@ -37,4 +36,3 @@ $(document).ready(function(){
         ]
     });
 });
-</script>
