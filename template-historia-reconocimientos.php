@@ -1,3 +1,4 @@
+<?php /* Template Name: Historia */ ?>
 <?php get_header(); ?>
 <section class="py-6 is-relative content">
 	<div class="container">

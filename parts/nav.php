@@ -10,7 +10,7 @@
                 <span></span>
             </span>
         </div>
-        <div id="navbarMenuHeroC" class="navbar-menu">
+        <div id="navbarMenuHeroC" class="navbar-menu is-relative">
             <div class="navbar-end">
                 <a target='_self' href='<?php echo get_site_url(); ?>' class="navbar-item has-text-black is-bold">
                     Inicio
@@ -67,6 +67,12 @@
                     <span>Donar</span>
                 </a>
             </span>
+            <div id='languages' class='is-absolute'>
+                <?php 
+                    $args = array( 'show_flags' => 1, 'show_names' => 0 );
+                    pll_the_languages($args);
+                ?>
+            </div>
         </div>
     </div>
 </header>

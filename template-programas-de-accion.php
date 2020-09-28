@@ -1,3 +1,4 @@
+<?php /* Template Name: Programas de Acción */ ?>
 <?php get_header(); ?>
 <section class="pt-6 is-relative content">
 	<div class="container">

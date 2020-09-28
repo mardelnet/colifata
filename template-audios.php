@@ -1,3 +1,4 @@
+<?php /* Template Name: Audios */ ?>
 <?php get_header(); ?>
 <section class="pt-6 pb-3">
 	<div class="container">

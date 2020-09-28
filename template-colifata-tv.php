@@ -1,3 +1,4 @@
+<?php /* Template Name: Colifata TV */ ?>
 <?php get_header(); ?>
 <section class="pt-6 pb-0">
 	<div class="container">

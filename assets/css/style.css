@@ -36,6 +36,21 @@ footer li {
 #donar .container {
     background-color: var(--color2);
 }
+#languages {
+    top: 12px;
+    right: 12px;
+}
+#languages li {
+    list-style: none;
+    display: inline-block;
+}
+#languages img {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 5px;
+}
 #noticias {
     background-image: url(../images/slide2.jpg);
 }
@@ -84,11 +99,12 @@ footer li {
     background-image: linear-gradient(var(--color3),#296330);
     padding: 9rem 1.5rem 3rem;
 }
-.footer input, .footer .textarea:not([rows]) {
+.footer input, .footer .textarea {
     background: transparent;
-    max-height: 180px !important;
+    max-height: 100px !important;
     min-height: 0 !important;
     height: auto;
+    margin-bottom: 5px;
 }
 .footer .button,
 .hero .button {

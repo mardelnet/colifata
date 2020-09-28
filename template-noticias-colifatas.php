@@ -1,3 +1,4 @@
+<?php /* Template Name: Noticias */ ?>
 <?php
     $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
     $query = new WP_Query( array(
@@ -64,7 +65,4 @@
         <?php endif; ?>
     </div>
 </section>
-
-
-
 <?php get_footer(); ?>

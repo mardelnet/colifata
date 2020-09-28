@@ -1,3 +1,10 @@
+<?php /* Template Name: Inicio */ ?>
+<?php
+$query = new WP_Query( array(
+	'post_type' => 'post',
+	'posts_per_page' => 6,
+) );
+?>
 <?php get_header('home'); ?>
 <section class="py-6">
 	<div class="container">
@@ -26,69 +33,34 @@
 			</div>
 			<div class="column" style="width: 1px">
 				<div class="columns slider">
+				<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 					<div class="column">
-						<div class="card has-border-radius">
-							<div class="card-image">
-								<figure class="image is-4by3">
-								<img class="has-object-fit-cover has-border-radius" src="https://lacolifata.com.ar/wp-content/uploads/2018/10/IMG_0439-670x300.jpg" alt="Noticia de La Colifata">
-								</figure>
+						<a target='_self' href='<?php echo get_permalink(); ?>'>
+							<div class="card has-border-radius">
+								<?php if (has_post_thumbnail( $post->ID ) ): ?>
+									<div class="card-image">
+										<figure class="image is-4by3">
+											<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+											<img class="has-object-fit-cover has-border-radius" src="<?php echo $image[0]; ?>" alt="Noticia de La Colifata">
+										</figure>
+									</div>
+								<?php endif; ?>
+								<div class="card-content">
+									<div class="media">
+										<div class="media-content">
+											<p class="title is-4">
+												<?php echo get_the_title(); ?>
+											</p>
+										</div>
+									</div>
+									<div class="content">
+										<?php echo substr( strip_tags( get_the_content() ) , 0 , 200 ); ?>...
+									</div>
+								</div>
 							</div>
-							<div class="card-content">
-								<div class="media">
-								<div class="media-content">
-									<p class="title is-4">
-										¡La Colifata te abre las puertas para que puedas tener tu programa de radio!
-									</p>
-								</div>
-								</div>
-								<div class="content">
-									Nuestro estudio externado es un lugar abierto a toda la comunidad para que estudiantes, aficionados a la radiofonía y todas aquellas […]
-								</div>
-							</div>
-						</div>
+						</a>
 					</div>
-					<div class="column">
-						<div class="card has-border-radius">
-							<div class="card-image">
-								<figure class="image is-4by3">
-								<img class="has-object-fit-cover has-border-radius" src="https://lacolifata.com.ar/wp-content/uploads/2018/12/DSC_0096-e1544558655694-300x300.jpg" alt="Noticia de La Colifata">
-								</figure>
-							</div>
-							<div class="card-content">
-								<div class="media">
-								<div class="media-content">
-									<p class="title is-4">
-										Estamos a las puertas de cumplir nuestra soñada frecuencia definitiva
-									</p>
-								</div>
-								</div>
-								<div class="content">
-									La Colifata, la primer radio del mundo en transmitir desde un psiquiátrico, reconocida por la Organización Panamericana de la Salud […]
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="column">
-						<div class="card has-border-radius">
-							<div class="card-image">
-								<figure class="image is-4by3">
-								<img class="has-object-fit-cover has-border-radius" src="https://lacolifata.com.ar/wp-content/uploads/2018/12/Paradelf1-670x300.jpg" alt="Noticia de La Colifata">
-								</figure>
-							</div>
-							<div class="card-content">
-								<div class="media">
-								<div class="media-content">
-									<p class="title is-4">
-										Ganamos un premio en Rusia
-									</p>
-								</div>
-								</div>
-								<div class="content">
-									Hoy ganamos  el Primer premio en la categoría Audiovisual en los Juegos Paradélficos por nuestro programa «Colifata Filosa», de Canal Encuentro. […]
-								</div>
-							</div>
-						</div>
-					</div>
+				<?php endwhile; wp_reset_postdata(); endif; ?>
 				</div>
 			</div>
 		</div>
@@ -107,26 +79,14 @@
 			</div>
 			<div class="column" style="width: 1px;">
 				<div class="columns slider">
+				<?php $i=0; if( have_rows('reconocimientos',9515) ): while( have_rows('reconocimientos',9515) && $i<=6 ) : the_row(); ?>
 					<div class="column is-relative is-size-5">
 						<i class="fas fa-award"></i>
-						<strong>6 de Junio 2014.</strong><br>
-						Distinción de la Honorable Cámara de Diputados de La Nación a Radio La Colifata en el Día del Periodista, por su labor periodística original comunitaria y autogestionada.
+						<strong><?php echo get_sub_field('fecha'); ?></strong><br>
+						<?php echo substr( get_sub_field('descripcion') , 0 ,150 ); ?>...<br>
+						<sub><?php echo get_sub_field('organizacion'); ?></sub>
 					</div>
-					<div class="column is-relative is-size-5">
-						<i class="fas fa-award"></i>
-						<strong>Mayo 1996.</strong><br>
-						Reconocimiento de la Organización Panamericana de la Salud.
-					</div>
-					<div class="column is-relative is-size-5">
-						<i class="fas fa-award"></i>
-						<strong>Abril 1996.</strong><br>
-						Mención de Honor en los premios “Martin Fierro”, APTRA.
-					</div>
-					<div class="column is-relative is-size-5">
-						<i class="fas fa-award"></i>
-						<strong>6 de Junio 2014.</strong><br>
-						Distinción de la Honorable Cámara de Diputados de La Nación a Radio La Colifata en el Día del Periodista, por su labor periodística original comunitaria y autogestionada.
-					</div>
+				<?php endwhile; $i++; endif; ?>
 				</div>
 			</div>
 		</div>

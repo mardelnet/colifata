@@ -1,7 +1,7 @@
 <?php get_template_part( 'parts/head' ); ?>
 <section class="hero is-relative is-fullheight">
 	<video width="100%" height="100%" autoplay muted loop class="has-blur">
-		<source src="assets/videos/colifata.mp4" type="video/mp4">
+		<source src="<?php echo get_template_directory_uri(); ?>/assets/videos/colifata.mp4" type="video/mp4">
 		</video>
 	<div class="overlay"></div>
 	<div class="hero-head">

@@ -1,3 +1,4 @@
+<?php /* Template Name: Prensa */ ?>
 <?php get_header(); ?>
 <section class="py-6 content">
 	<div class="container">
