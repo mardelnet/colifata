@@ -1,5 +1,5 @@
 <?php
-if( function_exists('acf_add_local_field_group') ):
+if (function_exists('acf_add_local_field_group')) :
 
     acf_add_local_field_group(array(
         'key' => 'group_5f69223cc9133',
@@ -97,7 +97,7 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
-    
+
     acf_add_local_field_group(array(
         'key' => 'group_5f692a1797639',
         'title' => 'Colifata Francia',
@@ -220,7 +220,7 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
-    
+
     acf_add_local_field_group(array(
         'key' => 'group_5f6fca9785b05',
         'title' => 'Datos Generales',
@@ -663,25 +663,6 @@ if( function_exists('acf_add_local_field_group') ):
                 'new_lines' => '',
             ),
             array(
-                'key' => 'field_5f7cbd466d046',
-                'label' => 'ENG titulo contacto (copy)',
-                'name' => 'eng_titulo_contacto_copy',
-                'type' => 'text',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '50',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'maxlength' => '',
-            ),
-            array(
                 'key' => 'field_5f7cbd4a6d047',
                 'label' => 'FR titulo contacto',
                 'name' => 'fr_titulo_contacto',
@@ -738,7 +719,7 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
-    
+
     acf_add_local_field_group(array(
         'key' => 'group_5f621ac17406f',
         'title' => 'Historia',
@@ -795,7 +776,7 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
-    
+
     acf_add_local_field_group(array(
         'key' => 'group_5f6919b1876fe',
         'title' => 'Investigación',
@@ -899,7 +880,7 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
-    
+
     acf_add_local_field_group(array(
         'key' => 'group_5f5fbd00d2baf',
         'title' => 'Prensa',
@@ -1028,7 +1009,7 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
-    
+
     acf_add_local_field_group(array(
         'key' => 'group_5f621f899455f',
         'title' => 'Programas de Acción',
@@ -1149,7 +1130,7 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
-    
+
     acf_add_local_field_group(array(
         'key' => 'group_5f5fbe9b0fbf8',
         'title' => 'Reconocimientos',
@@ -1286,7 +1267,7 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
-    
+
     acf_add_local_field_group(array(
         'key' => 'group_5f692ffb4ac80',
         'title' => 'Videos',
@@ -1361,5 +1342,118 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
-    
-    endif;
+
+    acf_add_local_field_group(array(
+        'key' => 'group_5f7c8b1172590',
+        'title' => 'Contacto',
+        'fields' => array(
+            array(
+                'key' => 'field_5f7c8bb340a3e',
+                'label' => 'Formulario de contacto',
+                'name' => 'formulario_contacto',
+                'type' => 'textarea',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'maxlength' => '',
+                'rows' => '',
+                'new_lines' => '',
+            ),
+            array(
+                'key' => 'field_5f7c91c240a3f',
+                'label' => 'Direccion titulo',
+                'name' => 'direccion_titulo',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+            array(
+                'key' => 'field_5f7c91ee40a41',
+                'label' => 'Telefono titulo',
+                'name' => 'telefono_titulo',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+            array(
+                'key' => 'field_5f7c920840a43',
+                'label' => 'Email titulo',
+                'name' => 'email_titulo',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'page',
+                    'operator' => '==',
+                    'value' => '9217',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'page',
+                    'operator' => '==',
+                    'value' => '10917',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'page',
+                    'operator' => '==',
+                    'value' => '11000',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
+endif;

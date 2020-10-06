@@ -44,7 +44,7 @@
                         <?php echo get_field('direccion_titulo'); ?>
                     </h2>
                     <p>
-                        <?php echo get_field('direccion_valor'); ?>
+                        <?php the_field('domicilio', 'option'); ?>
                     </p>
                 </div>
                 <div class="column is-full has-text-centered">
@@ -52,7 +52,7 @@
                         <?php echo get_field('telefono_titulo'); ?>
                     </h2>
                     <p>
-                        <?php echo get_field('telefono_valor'); ?>
+                        <?php the_field('telefono', 'option'); ?>
                     </p>
                 </div>
                 <div class="column is-full has-text-centered">
@@ -60,7 +60,7 @@
                         <?php echo get_field('email_titulo'); ?>
                     </h2>
                     <p>
-                        <?php echo get_field('email_valor'); ?>
+                        <?php the_field('email', 'option'); ?>
                     </p>
                 </div>
             </div>
