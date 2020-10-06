@@ -3,44 +3,44 @@
         <div class="columns">
             <div class="column">
                 <p class="is-size-4 mb-3 has-secondary-font">
-                    Nosotros
+                    <?php the_field('esp_titulo_nosotros', 'option'); ?>
                 </p>
                 <p>
-                    La Colifata es una ONG sin fines de lucro denominada Asociación Civil “La Colifata, Salud Mental y Comunicación”, que desarrolla actividades en el área de investigación y brinda servicios en salud mental utilizando los medios de comunicación para la creación de espacios en salud.
+                    <?php the_field('esp_texto_nosotros', 'option'); ?>
                 </p>
             </div>
             <div class="column">
                 <p class="is-size-4 mb-3 has-secondary-font">
-                    Contacto
+                    <?php the_field('esp_titulo_contacto', 'option'); ?>
                 </p>
                 <p>
-                    Dirección: Virrey Avilés 3740 dto D, Ciudad Autónoma de Buenos Aires, Argentina.<br>
-                    Teléfono: 4554-4356<br>
-                    Email: lacolifataorg@gmail.com
+                    Dirección: <?php the_field('domicilio', 'option'); ?><br>
+                    Teléfono: <?php the_field('telefono', 'option'); ?><br>
+                    Email: <?php the_field('email', 'option'); ?>
                 </p>
                 <ul class="mt-5">
                     <li>
-                        <a target="_blank" href="https://es-la.facebook.com/radiolacolifata">
+                        <a target="_blank" href="<?php the_field('facebook_link', 'option'); ?>">
                         <span class="icon has-text-white is-size-4"><i class="fab fa-facebook-f"></i></span>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.instagram.com/radiolacolifata/">
+                        <a target="_blank" href="<?php the_field('instagram_link', 'option'); ?>">
                         <span class="icon has-text-white is-size-4"><i class="fab fa-instagram"></i></span>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.youtube.com/channel/UCo7vEh98l5AZpAAvbO7TBQA">
+                        <a target="_blank" href="<?php the_field('youtube_link', 'option'); ?>">
                         <span class="icon has-text-white is-size-4"><i class="fab fa-youtube"></i></span>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://twitter.com/radiolacolifata">
+                        <a target="_blank" href="<?php the_field('twitter_link', 'option'); ?>">
                         <span class="icon has-text-white is-size-4"><i class="fab fa-twitter"></i></span>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://soundcloud.com/la-colifata">
+                        <a target="_blank" href="<?php the_field('soundcloud_link', 'option'); ?>">
                         <span class="icon has-text-white is-size-4"><i class="fab fa-soundcloud"></i></span>
                         </a>
                     </li>
@@ -48,7 +48,7 @@
             </div>
             <div class="column">
                 <p class="is-size-4 mb-3 has-secondary-font">
-                    Consultas Online
+                    <?php the_field('esp_titulo_consultas', 'option'); ?>
                 </p>
                 <p>
                     <?php echo do_shortcode( '[contact-form-7 id="10867" title="Footer contact form"]' ) ?>
