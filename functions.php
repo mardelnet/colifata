@@ -24,6 +24,17 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 }
+add_action( 'languageSelected', 'languageSelected' );
 
+function languageSelected(){
+  $url = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+  if (strpos($url,'/en/') !== false) {
+    return "en";
+  }elseif (strpos($url,'/fr/') !== false) {
+    return "fr";
+  } else {
+    return "es";
+  }
+}
 include 'custom_fields.php';
 ?>
