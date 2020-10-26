@@ -10,10 +10,10 @@ $query = new WP_Query( array(
 	<div class="container">
 		<div class="columns">
 			<div class="column is-one-quarter has-secondary-font is-size-1 has-text-right-desktop">
-				Quiénes Somos
+				<?php the_field('quienes_somos_titulo_' . languageSelected(), 'options') ?>
 			</div>
 			<div class="column is-size-5">
-				La Colifata es una ONG sin fines de lucro denominada Asociación Civil “La Colifata, Salud Mental y Comunicación”, que desarrolla actividades en el área de investigación y brinda servicios en salud mental utilizando los medios de comunicación para la creación de espacios en salud. Es comúnmente conocida como LT 22 Radio “La Colifata”, la radio de los internos y ex internos del hospital Borda de Buenos Aires y es la primera radio en el mundo en transmitir desde un neuropsiquiátrico.
+				<?php the_field('quienes_somos_' . languageSelected(), 'options') ?>
 			</div>
 		</div>
 	</div>
@@ -25,10 +25,10 @@ $query = new WP_Query( array(
 		<div class="columns">
 			<div class="column has-secondary-font is-one-quarter has-text-right-desktop is-relative">
 				<p class="is-size-1 has-text-white">
-					Últimas noticias
+					<?php the_field('noticias_titulo_' . languageSelected(), 'options') ?>
 				</p>
-				<a class="is-absolute arrows has-text-white">
-					Ver todos >>
+				<a target='_self' href='<?php if(languageSelected() == "fr"){ echo "/fr/nouvelles-colifatas/"; }elseif(languageSelected() == "en"){ echo "/en/colifatas-news/"; }else{ echo "/noticias-colifatas/"; } ?>' class="is-absolute arrows has-text-white">
+					<?php the_field('noticias_boton_' . languageSelected(), 'options') ?>
 				</a>
 			</div>
 			<div class="column" style="width: 1px">
@@ -71,22 +71,24 @@ $query = new WP_Query( array(
 		<div class="columns">
 			<div class="column is-relative has-secondary-font is-one-quarter has-text-right-desktop">
 				<p class="is-break is-size-1">
-					Reconocimientos
+					<?php the_field('reconocimientos_titulo_' . languageSelected(), 'options') ?>
 				</p>
-				<a class="is-absolute arrows">
-					Ver todos >>
+				<a target='_self' class="is-absolute arrows has-text-dark" href='<?php if(languageSelected() == "fr"){ echo "/fr/histoire-prix-et-reconnaissances#p"; }elseif(languageSelected() == "en"){ echo "/en/history-awards#p"; }else{ echo "/historia-reconocimientos#p"; } ?>' >
+					<?php the_field('reconocimientos_boton_' . languageSelected(), 'options') ?>
 				</a>
 			</div>
 			<div class="column" style="width: 1px;">
 				<div class="columns slider">
-				<?php $i=0; if( have_rows('reconocimientos',9515) ): while( have_rows('reconocimientos',9515) && $i<=6 ) : the_row(); ?>
+				<?php $i=0; if( have_rows('reconocimientos',9515) ): while( have_rows('reconocimientos',9515 )) : the_row(); ?>
+					<?php if ( $i<=6 ) : ?>
 					<div class="column is-relative is-size-5">
 						<i class="fas fa-award"></i>
 						<strong><?php echo get_sub_field('fecha'); ?></strong><br>
 						<?php echo substr( get_sub_field('descripcion') , 0 ,150 ); ?>...<br>
 						<sub><?php echo get_sub_field('organizacion'); ?></sub>
 					</div>
-				<?php endwhile; $i++; endif; ?>
+					<?php endif; $i++; ?>
+				<?php endwhile; endif; ?>
 				</div>
 			</div>
 		</div>

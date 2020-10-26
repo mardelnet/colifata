@@ -9,16 +9,16 @@
 	</div>
 	<div class="hero-body">
 		<div class="card has-secondary-font is-size-3 has-text-centered">
-			<a class="has-text-black" href="#" onClick="window.open('radio.html','pagename','resizable,height=260,width=370'); return false;">
+			<a class="has-text-black" href="#" onClick="window.open('radio','pagename','resizable,height=260,width=370'); return false;">
 				<i class="far fa-play-circle neon has-text-white mb-6"></i>
 				<span>FM 100.3</span><br>
-				Radio Colifata • Escuchanos Online
+				<?php the_field('subtitulo_' . languageSelected(), 'options') ?>
 			</a>
 			<noscript>
 				<a class="has-text-black" href="radio.html" target="_blank">
 					<i class="far fa-play-circle neon has-text-white mb-6"></i>
 					<span>FM 100.3</span><br>
-					Radio Colifata / Escuchanos Online
+					<?php the_field('subtitulo_' . languageSelected(), 'options') ?>
 				</a>
 			</noscript>
 		</div>

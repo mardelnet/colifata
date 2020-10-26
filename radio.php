@@ -1,3 +1,4 @@
+<?php /* Template Name: Reproductor de radio */ ?>
 <!DOCTYPE html>
 <html>
 	<head>

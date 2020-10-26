@@ -3,10 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title><?php echo get_the_title(); ?> / La Colifata</title>
+	<title>
+	<?php
+		if ( is_home() ) {
+			echo 'La Colifata, Salud Mental y Comunicación';
+		}
+		else {
+			echo get_the_title() . '/ La Colifata';	
+		} ?>
+	</title>
 	<link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/bulma.min.css">
 	<link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/slick.css"/>
 	<link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/style.css">
+	<link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/responsive.css">
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo get_bloginfo('template_directory'); ?>/assets/images/favicons/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_bloginfo('template_directory'); ?>/assets/images/favicons/apple-touch-icon-114x114.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_bloginfo('template_directory'); ?>/assets/images/favicons/apple-touch-icon-72x72.png" />
@@ -29,4 +38,18 @@
 	<meta name="msapplication-square310x310logo" content="<?php echo get_bloginfo('template_directory'); ?>/assets/images/favicons/mstile-310x310.png" />
 	<?php wp_head();?>
 </head>
-<body>
+<body class='
+	<?php
+	if ( is_single() ) {
+		echo get_post_type();
+	}
+	else if ( is_archive() ) {
+		echo 'archive';
+	}
+	else if ( is_home() ) {
+		echo 'homepage';
+	}
+	else {
+		echo 'default-page';		
+	} ?>
+'>

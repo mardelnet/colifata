@@ -1,3 +1,4 @@
+<script>
 $(document).ready(function(){
     $('#noticias .slider').slick({
         infinite: true,
@@ -10,7 +11,10 @@ $(document).ready(function(){
         responsive: [
             {
             breakpoint: 768,
-            settings: unslick
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+                }	
             }
         ]
     });
@@ -22,12 +26,15 @@ $(document).ready(function(){
         autoplaySpeed: 2000,
         arrows: false,
         dots: false,
-        adaptiveHeight: true,
         responsive: [
             {
             breakpoint: 768,
-            settings: unslick	
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+                }	
             }
         ]
     });
 });
+</script>

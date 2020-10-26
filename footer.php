@@ -1,46 +1,117 @@
+
+<style>
+#wpcf7-f11144-o1 input[type="text"],
+#wpcf7-f11144-o1 input[type="email"],
+#wpcf7-f11144-o1 textarea,
+#wpcf7-f11068-o1 input[type="text"],
+#wpcf7-f11068-o1 input[type="email"],
+#wpcf7-f11068-o1 textarea,
+#wpcf7-f11145-o1 input[type="text"],
+#wpcf7-f11145-o1 input[type="email"],
+#wpcf7-f11145-o1 textarea {
+    width: 100%;
+    color: #fff;
+    background-color: transparent;
+    margin-bottom: 1rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ffffffad;
+    padding: .5rem;
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+  
+}
+#wpcf7-f11144-o1 textarea,
+#wpcf7-f11145-o1 textarea,
+#wpcf7-f11068-o1 textarea {
+	height: 6rem;
+}
+#wpcf7-f11144-o1 input[type="submit"],
+#wpcf7-f11145-o1 input[type="submit"],
+#wpcf7-f11068-o1 input[type="submit"] {
+    background: transparent;
+    padding: .5rem 1.25rem;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    border: 1px solid #ffffffba;
+    border-radius: 3px;
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 1rem;
+    float: right;
+
+}
+</style>
+
 <footer class="footer is-relative has-text-white is-size-6">
     <div class="container">
         <div class="columns">
             <div class="column">
                 <p class="is-size-4 mb-3 has-secondary-font">
-                    Nosotros
+                    <?php   
+                      if(languageSelected() == "fr"){
+                          the_field('fr_titulo_nosotros', 'option');
+                      }elseif(languageSelected() == "en"){
+                          the_field('eng_titulo_nosotros', 'option');
+                      }else{
+                          the_field('esp_titulo_nosotros', 'option');
+                      }
+                    ?>
                 </p>
                 <p>
-                    La Colifata es una ONG sin fines de lucro denominada Asociación Civil “La Colifata, Salud Mental y Comunicación”, que desarrolla actividades en el área de investigación y brinda servicios en salud mental utilizando los medios de comunicación para la creación de espacios en salud.
+                    <?php   
+                      if(languageSelected() == "fr"){
+                          the_field('fr_texto_nosotros', 'option');
+                      }elseif(languageSelected() == "en"){
+                          the_field('eng_texto_nosotros', 'option');
+                      }else{
+                          the_field('esp_texto_nosotros', 'option');
+                      }
+                    ?>
                 </p>
             </div>
             <div class="column">
                 <p class="is-size-4 mb-3 has-secondary-font">
-                    Contacto
+                    <?php   
+                      if(languageSelected() == "fr"){
+                          the_field('fr_titulo_contacto', 'option');
+                      }elseif(languageSelected() == "en"){
+                          the_field('eng_titulo_contacto', 'option');
+                      }else{
+                          the_field('esp_titulo_contacto', 'option');
+                      }
+                    ?>
                 </p>
                 <p>
-                    Dirección: Virrey Avilés 3740 dto D, Ciudad Autónoma de Buenos Aires, Argentina.<br>
-                    Teléfono: 4554-4356<br>
-                    Email: lacolifataorg@gmail.com
+                    <?php if(languageSelected() == "fr"){ echo "Adresse"; }elseif(languageSelected() == "en"){ echo "Address"; }else{ echo "Dirección"; } ?>: <?php the_field('domicilio', 'option'); ?><br>
+                    <?php if(languageSelected() == "fr"){ echo "Téléphone"; }elseif(languageSelected() == "en"){ echo "Phone"; }else{ echo "Teléfono"; } ?>: <?php the_field('telefono', 'option'); ?><br>
+                    Email: <?php the_field('email', 'option'); ?>
                 </p>
                 <ul class="mt-5">
                     <li>
-                        <a target="_blank" href="https://es-la.facebook.com/radiolacolifata">
+                        <a target="_blank" href="<?php the_field('facebook_link', 'option'); ?>">
                         <span class="icon has-text-white is-size-4"><i class="fab fa-facebook-f"></i></span>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.instagram.com/radiolacolifata/">
+                        <a target="_blank" href="<?php the_field('instagram_link', 'option'); ?>">
                         <span class="icon has-text-white is-size-4"><i class="fab fa-instagram"></i></span>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.youtube.com/channel/UCo7vEh98l5AZpAAvbO7TBQA">
+                        <a target="_blank" href="<?php the_field('youtube_link', 'option'); ?>">
                         <span class="icon has-text-white is-size-4"><i class="fab fa-youtube"></i></span>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://twitter.com/radiolacolifata">
+                        <a target="_blank" href="<?php the_field('twitter_link', 'option'); ?>">
                         <span class="icon has-text-white is-size-4"><i class="fab fa-twitter"></i></span>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://soundcloud.com/la-colifata">
+                        <a target="_blank" href="<?php the_field('soundcloud_link', 'option'); ?>">
                         <span class="icon has-text-white is-size-4"><i class="fab fa-soundcloud"></i></span>
                         </a>
                     </li>
@@ -48,31 +119,50 @@
             </div>
             <div class="column">
                 <p class="is-size-4 mb-3 has-secondary-font">
-                    Consultas Online
+                    <?php   
+                      if(languageSelected() == "fr"){
+                          the_field('fr_titulo_consultas', 'option');
+                      }elseif(languageSelected() == "en"){
+                          the_field('eng_titulo_consultas', 'option');
+                      }else{
+                          the_field('esp_titulo_consultas', 'option');
+                      }
+                    ?>
                 </p>
                 <p>
-                    <?php echo do_shortcode( '[contact-form-7 id="10867" title="Footer contact form"]' ) ?>
+                    <?php   
+                      if(languageSelected() == "fr"){
+                        echo do_shortcode( '[contact-form-7 id="11145" title="Form Footer FR"]' );
+                      }elseif(languageSelected() == "en"){
+                        echo do_shortcode( '[contact-form-7 id="11144" title="Form Footer EN"]' );
+                      }else{
+                        echo do_shortcode( '[contact-form-7 id="11068" title="Form Footer ES"]' );
+                      }
+                    ?>
                 </p>
             </div>
         </div>
         <div class="columns">
             <div class="column is-full">
                 <p class="is-size-7 is-full mt-1 has-text-centered">
-                    Diseño y desarrollo: Diego Bollini + Pedro Figueroa
+                    <?php if(languageSelected() == "fr"){ echo "Design et développement"; }elseif(languageSelected() == "en"){ echo "Design and development"; }else{ echo "Diseño y desarrollo"; } ?>: 
+                        <a class='has-text-white' target='_blank' href='https://www.linkedin.com/in/diegobollini/'>Diego Bollini </a>
+                        <a class='has-text-white' target='_blank' href='https://www.linkedin.com/in/pedrofigueroa1989/'>+ Pedro Figueroa</a>
                 </p>
             </div>
         </div>
     </div>
 </footer>
 <button id='radio' class="button is-medium is-fixed shk">
-    <a target="_blank" href="">
+    <a target="_blank"  href="#" onClick="window.open('radio','pagename','resizable,height=260,width=370'); return false;">
         <span class="icon is-small"><i class="far fa-play-circle neon has-text-white"></i></span>
-        <span class="is-size-6 has-text-white has-secondary-font neon">Radio Online</span>
+        <span class="is-size-6 has-text-white has-secondary-font neon">Online Radio</span>
     </a>						
 </button>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/assets/js/slick.min.js"></script>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/assets/js/fontawesome.js"></script>
+<script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/assets/js/index.js"></script>
 <?php wp_footer(); ?>														
 </body>
 </html>

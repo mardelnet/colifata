@@ -36,6 +36,21 @@ footer li {
 #donar .container {
     background-color: var(--color2);
 }
+#featured-image {
+    height: 400px;
+    margin-top: -60px;
+    background-position: center center;
+    background-size: contain;
+    position: relative;
+}
+#featured-image div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: radial-gradient(ellipse, transparent 30%, var(--color2));
+}
 #languages {
     top: 12px;
     right: 12px;
@@ -77,6 +92,12 @@ footer li {
     border: 0;
     z-index: 9999999;
 }
+.wpcf7-form input[type="text"], 
+.wpcf7-form input[type="email"], 
+.wpcf7-form textarea {
+    border-bottom: 1px solid #ffffffad !important;
+    max-height: 4rem !important;
+}
 .arrows {
     bottom: 12px;
     right: 12px;
@@ -111,7 +132,8 @@ footer li {
     background-color: var(--color2);
     padding: 5px 15px;
 }
-.footer:before {
+.footer:before,
+#featured-image:before {
     content: "";
     display: block;
     height: 75px;
@@ -157,7 +179,8 @@ footer li {
     background-color: var(--color2); /* For browsers that do not support gradients */
     background-image: linear-gradient(var(--color3),var(--color2));
 }
-.hero:after {
+.hero:after,
+#featured-image:after {
     content: "";
     display: block;
     height: 75px;
@@ -218,6 +241,13 @@ footer li {
     left: 0;
     opacity: 0.8;
 }
+.post .hero:after {
+    display: none;
+}
+.post .hero .overlay {
+    background-color: #fff;
+    background-image: linear-gradient(var(--color3),#fff 60%);
+}
 .py-6 {
     padding-top: 6rem!important;
     padding-bottom: 6rem!important;
@@ -241,21 +271,6 @@ footer li {
     background-color: var(--color1);
     border-color: var(--color1);
     border: 0;
-}
-@media screen and (min-width: 1024px) {
-    .navbar-item.is-active .navbar-dropdown, .navbar-item.is-hoverable:focus .navbar-dropdown, .navbar-item.is-hoverable:focus-within .navbar-dropdown, .navbar-item.is-hoverable:hover .navbar-dropdown {
-        margin-top: -50px;
-    }
-}
-@media screen and (min-width: 1408px) {
-    .container {
-        max-width: 960px;
-    }
-}
-@media screen and (min-width: 1216px) {
-    .container {
-        max-width: 960px;
-    }
 }
 @keyframes neon1 {
     from {

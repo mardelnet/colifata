@@ -2,12 +2,12 @@
 	<div class="container px-5 py-5 has-border-radius">
 		<div class="columns is-vcentered">
 			<div class="column is-four-fifths">
-				Si querés ayudar a sostener las actividades de La Colifata, podés realizar una donación con tu tarjeta de crédito o débito Visa o Mastercard, a través del «Formulario Seguro de Donaciones» que brinda DonarOnline.org y al que podés acceder desde el siguiente enlace:
+                <?php the_field( 'donacion_texto_' . languageSelected(), 'options' ) ?>
 			</div>
 			<div class="column has-text-right-desktop">
-				<button class="button is-large has-secondary-font">
-					Donar
-				</button>
+				<a target='_blank' href="<?php the_Field('link_donaciones', 'options') ?>" class="button is-large has-secondary-font">
+                    <?php the_field( 'donacion_boton_' . languageSelected(), 'options' ) ?>
+				</a>
 			</div>
 		</div>
 	</div>

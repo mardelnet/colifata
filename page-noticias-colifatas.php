@@ -1,4 +1,3 @@
-<?php /* Template Name: Noticias */ ?>
 <?php
     $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
     $query = new WP_Query( array(
@@ -8,34 +7,6 @@
     ) );
 ?>
 <?php get_header(); ?>
-
-<style>
-.pagination {
-  display: flex;
-  justify-content: center;
-}
-.pagination .page-numbers {
-    color: #4a4a4a;
-    min-width: 2.5em; 
-    font-size: 1em;
-    justify-content: center;
-    margin: .25rem;
-    padding: .5em;
-    text-align: center;
-    align-items: center;
-    border: 1px solid #dbdbdb;
-    border-radius: 4px;
-    box-shadow: none;
-    display: inline-flex;
-  	font-weight: 700;
-}
-.pagination .page-numbers.current {
-  color: #FFF!important;
-  background-color: #008700!important;
-  border-color: #008700!important;
-}
-</style>
-
 <section class="py-6 has-bg-center">
 	<div class="container">
         <?php $i=0; $j=1; ?>
@@ -73,24 +44,27 @@
         <?php wp_reset_postdata(); ?>
         <?php endif; ?>
     </div>
-    <div class="pagination mt-6">
-        <?php 
-            echo paginate_links( array(
-                'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
-                'total'        => $query->max_num_pages,
-                'current'      => max( 1, get_query_var( 'paged' ) ),
-                'format'       => '?paged=%#%',
-                'show_all'     => false,
-                'type'         => 'plain',
-                'end_size'     => 2,
-                'mid_size'     => 1,
-                'prev_next'    => true,
-                'prev_text'    => sprintf( '<i></i> %1$s', __( 'Anteriores', 'text-domain' ) ),
-                'next_text'    => sprintf( '%1$s <i></i>', __( 'Posteriores', 'text-domain' ) ),
-                'add_args'     => false,
-                'add_fragment' => '',
-            ) );
-        ?>
-    </div>
+    <div class="pagination mt-6 aa">
+            <?php 
+                echo paginate_links( array(
+                    'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+                    'total'        => $query->max_num_pages,
+                    'current'      => max( 1, get_query_var( 'paged' ) ),
+                    'format'       => '?paged=%#%',
+                    'show_all'     => false,
+                    'type'         => 'plain',
+                    'end_size'     => 2,
+                    'mid_size'     => 1,
+                    'prev_next'    => true,
+                    'prev_text'    => sprintf( '<i></i> %1$s', __( 'Anteriores', 'text-domain' ) ),
+                    'next_text'    => sprintf( '%1$s <i></i>', __( 'Posteriores', 'text-domain' ) ),
+                    'add_args'     => false,
+                    'add_fragment' => '',
+                ) );
+            ?>
+            </div>
 </section>
+
+
+
 <?php get_footer(); ?>
